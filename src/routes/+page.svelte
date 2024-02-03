@@ -20,7 +20,7 @@
 
 <div class="bg-[#000] font-bold flex flex-col gap-5 justify-center items-center h-full w-full">
     <audio autoplay loop>
-        <source src="../The-Home/rain_thunder.mp3" type="audio/mp3">
+        <source src="../../The-Home/rain_thunder.mp3" type="audio/mp3">
         Seu navegador não suporta o elemento de áudio.
     </audio>
     <p class="cursor-pointer w-1/5">

@@ -25,7 +25,7 @@
                     {gender.name}
                 </h1>
                 <hr class="w-full">
-                <p class="w-auto h-[160px]">
+                <p class="w-[350px] h-[160px]">
                     <q>
                         {gender.desc}
                     </q>

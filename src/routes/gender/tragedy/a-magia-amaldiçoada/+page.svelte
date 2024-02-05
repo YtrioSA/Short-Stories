@@ -1,5 +1,13 @@
 <script>
+
+	import Icon from "@iconify/svelte";
 	import { Paginator } from "@skeletonlabs/skeleton";
+	import { goto } from '$app/navigation';
+	
+
+	const next = () => {
+		goto("/gender/tragedy/o-crepúsculo-da-aldeia-serena");
+	}
 
 	const source = [
 		{
@@ -76,7 +84,8 @@
 	}
 </script>
 
-<div class="bg-[#000] w-full h-full flex flex-col justify-center items-center">
+<div class="bg-[#000] w-full h-full flex justify-center items-center">
+	<div class="bg-[#000] w-1/2 h-full flex flex-col justify-center items-center">
 	{#each paginatedSource as row}
 		<div class="card w-[550px] border-2">
 			<header
@@ -137,6 +146,10 @@
 			</footer>
 		</div>
 	{/each}
+</div>
+<button on:click={next}>
+	<Icon class="w-16 h-16 cursor-pointer" icon="ei:arrow-right"/>
+</button>
 </div>
 
 <style>

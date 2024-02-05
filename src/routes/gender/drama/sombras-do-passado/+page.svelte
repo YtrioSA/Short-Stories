@@ -1,5 +1,12 @@
 <script>
+	
+	import { goto } from '$app/navigation';
 	import { Paginator } from "@skeletonlabs/skeleton";
+	import Icon from "@iconify/svelte";
+
+	const previous = () => {
+		goto("/gender/drama/a-maldição-da-mansão-ancestral");
+	}
 
 	const source = [
 		{
@@ -79,7 +86,11 @@
     
 </script>
 
-<div class="bg-[#000] w-full h-full flex flex-col justify-center items-center">
+<div class="bg-[#000] w-full h-full flex justify-center items-center">
+	<button on:click={previous}>
+		<Icon class="w-16 h-16 cursor-pointer" icon="ei:arrow-left"/>
+	</button>	
+<div class="bg-[#000] w-1/2 h-full flex flex-col justify-center items-center">
 	{#each paginatedSource as row}
 		<div class="card w-[550px] border-2">
 			<header
@@ -138,6 +149,7 @@
 			</footer>
 		</div>
 	{/each}
+</div>
 </div>
 
 <style>

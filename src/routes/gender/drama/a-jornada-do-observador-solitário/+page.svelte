@@ -1,5 +1,12 @@
 <script>
+	
+	import { goto } from '$app/navigation';
 	import { Paginator } from "@skeletonlabs/skeleton";
+	import Icon from "@iconify/svelte";
+
+	const next = () => {
+		goto("/gender/drama/os-casais-que-cultuavam-o-oculto");
+	}
 
 	const source = [
 		{
@@ -83,7 +90,9 @@
 	}
 </script>
 
-<div class="bg-[#000] w-full h-full flex flex-col justify-center items-center">
+<div class="bg-[#000] w-full h-full flex justify-center items-center">
+	
+<div class="bg-[#000] w-1/2 h-full flex flex-col justify-center items-center">
 	{#each paginatedSource as row}
 		<div class="card w-[550px] border-2">
 			<header
@@ -140,7 +149,10 @@
 		</div>
 	{/each}
 </div>
-
+<button on:click={next}>
+	<Icon class="w-16 h-16 cursor-pointer" icon="ei:arrow-right"/>
+</button>
+</div>
 <style>
 	.background {
 		background-position: center;

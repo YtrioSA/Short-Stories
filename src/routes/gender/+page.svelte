@@ -15,9 +15,9 @@
    
 </style>
 
-<div class="bg-[#000] flex justify-center items-center h-full w-full gap-5">
+<div class="bg-[#000] flex flex-col justify-center items-center h-full w-full gap-5">
     {#each data.gender as gender}
-        <div class="card">
+        <div class="card xl:w-1/2 md:w-1/2 lg:w-1/2 p-4 m-4">
             <header style="background-image: url({gender.cover})" class="card-header background rounded-lg rounded-b-none h-[250px] w-full"></header>
             <section class="flex flex-col gap-2 items-center justify-center p-4">
                 <h1 class="h3 flex gap-2 items-center">
@@ -25,10 +25,8 @@
                     {gender.name}
                 </h1>
                 <hr class="w-full">
-                <p class="w-[350px] h-[160px]">
-                    <q>
+                <p>
                         {gender.desc}
-                    </q>
                 </p>
             </section>
             <footer class="card-footer">

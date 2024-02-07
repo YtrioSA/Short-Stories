@@ -16,7 +16,7 @@
 
 <div class="bg-[#000] flex flex-wrap justify-around items-center h-full w-full gap-5">
     {#each data.tragedy as tragedy}
-        <div class="card border-2 m-3 md:w-1/2 lg:w-1/2 xl:w-1/2">
+        <div class="card border-2 m-3 p-5 md:w-1/2 lg:w-1/2 xl:w-1/2">
             <header style="background-image: url({tragedy.cover})" class="card-header background rounded-3xl rounded-b-none h-[170px] w-full"></header>
             <section class="flex flex-col gap-2 items-center justify-center p-4">
                 <strong>{tragedy.date}</strong>

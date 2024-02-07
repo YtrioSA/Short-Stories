@@ -16,7 +16,7 @@
 
 <div class="bg-[#000] flex flex-wrap justify-around items-center h-full w-full gap-5">
     {#each data.drama as drama}
-        <div class="card border-2 w-1/2 m-3">
+        <div class="card border-2 m-3 md:w-1/2 lg:w-1/2 xl:w-1/2">
             <header style="background-image: url({drama.cover})" class="card-header background rounded-3xl rounded-b-none h-[170px] w-full"></header>
             <section class="flex flex-col gap-2 items-center justify-center p-4">
                 <strong>{drama.date}</strong>
@@ -26,8 +26,8 @@
                     {drama.name}
                 </h1>
                 <hr class="w-full">
-                <p class="text-justify w-[400px] h-[160px] text-[14px]">
-                     {drama.summary}
+                <p class="text-justify w-auto h-[160px] text-[14px]">
+                    {drama.summary}
                 </p>
             </section>
             <footer class="card-footer">

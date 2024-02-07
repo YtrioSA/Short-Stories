@@ -108,7 +108,7 @@
 </script>
 
 <div class="bg-[#000] w-full h-full flex justify-center items-center">
-<div class="bg-[#000] w-full md:w-1/2 h-full flex flex-col justify-center items-center">
+<div class="bg-[#000] w-full md:w-1/2 h-full flex p-4 flex-col justify-center items-center">
 	<div class="flex">
 		<button on:click={previous}>
 			<Icon class="w-16 h-16 cursor-pointer" icon="ei:arrow-left"/>

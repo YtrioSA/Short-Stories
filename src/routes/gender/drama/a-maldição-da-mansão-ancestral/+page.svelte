@@ -88,12 +88,17 @@
 </script>
 
 <div class="bg-[#000] w-full h-full flex justify-center items-center">
-	<button on:click={previous}>
-		<Icon class="w-16 h-16 cursor-pointer" icon="ei:arrow-left"/>
-	</button>
-	<div class="bg-[#000] w-1/2 h-full flex flex-col justify-center items-center">
+	<div class="bg-[#000] w-full md:w-1/2 h-full flex flex-col justify-center items-center">
+		<div class="flex">
+			<button on:click={previous}>
+				<Icon class="w-16 h-16 cursor-pointer" icon="ei:arrow-left"/>
+			</button>
+			<button on:click={next}>
+				<Icon class="w-16 h-16 cursor-pointer" icon="ei:arrow-right"/>
+			</button>
+		</div>
 	{#each paginatedSource as row}
-		<div class="card w-[550px] border-2">
+		<div class="card w-full md:w-[550px] border-2 mb-6">
 			<header
 				style="background-image: url({row.cover})"
 				class="card-header background rounded-3xl rounded-b-none h-[145px] w-full">
@@ -153,9 +158,6 @@
 		</div>
 		{/each}
 	</div>
-	<button on:click={next}>
-		<Icon class="w-16 h-16 cursor-pointer" icon="ei:arrow-right"/>
-	</button>
 </div>
 
 <style>

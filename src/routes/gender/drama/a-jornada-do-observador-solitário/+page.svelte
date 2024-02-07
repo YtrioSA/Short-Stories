@@ -91,67 +91,57 @@
 </script>
 
 <div class="bg-[#000] w-full h-full flex justify-center items-center">
-	
-<div class="bg-[#000] w-1/2 h-full flex flex-col justify-center items-center">
-	{#each paginatedSource as row}
-		<div class="card w-[550px] border-2">
-			<header
-				style="background-image: url({row.cover})"
-				class="card-header background rounded-3xl rounded-b-none h-[145px] w-full"
-			></header>
-			<section class="flex flex-col items-center gap-5 justify-center p-4">
-				{#if row.sound === '../../The-Lone-Watcher/rain-in-the-afternoon.mp3'}
-					<audio autoplay loop>
-						<source src="../../The-Lone-Watcher/rain-in-the-afternoon.mp3" type="audio/mp3" />
-						Seu navegador não suporta o elemento de áudio.
-					</audio>
-				{/if}
-				{#if row.sound === '../../The-Lone-Watcher/cars-moving-and-horns-honking.mp3'}
-					<audio autoplay loop>
-						<source src="../../The-Lone-Watcher/cars-moving-and-horns-honking.mp3" type="audio/mp3" />
-						Seu navegador não suporta o elemento de áudio.
-					</audio>
-				{/if}
-				{#if row.sound === '../../The-Lone-Watcher/nightclub.mp3'}
-					<audio autoplay loop>
-						<source src="../../The-Lone-Watcher/nightclub.mp3" type="audio/mp3" />
-						Seu navegador não suporta o elemento de áudio.
-					</audio>
-				{/if}
-				{#if row.sound === '../../The-Lone-Watcher/prayer.mp3'}
-					<audio autoplay loop>
-						<source src="../../The-Lone-Watcher/prayer.mp3" type="audio/mp3" />
-						Seu navegador não suporta o elemento de áudio.
-					</audio>
-				{/if}
-				{#if row.sound === '../../The-Lone-Watcher/portal.mp3'}
-					<audio autoplay loop>
-						<source src="../../The-Lone-Watcher/portal.mp3" type="audio/mp3" />
-						Seu navegador não suporta o elemento de áudio.
-					</audio>
-				{/if}
-				<h3 class="h3">{row.title}</h3>
-				<h4 class="text-[#000] h4 font-bold">{row.part_title}</h4>
-				<hr class="w-full" />
-				<p class="mb-4 mt-0 text-justify font-light leading-relaxed text-[12px]">
-					{row.text}
-				</p>
-			</section>
-			<footer class="card-footer">
-				<Paginator
-					bind:settings={paginationSettings}
-					showFirstLastButtons={true}
-					showPreviousNextButtons={true}
-					justify="justify-center"
-					select="hidden"
-				/>
-			</footer>
-		</div>
-	{/each}
-</div>
-<button on:click={next}>
-	<Icon class="w-16 h-16 cursor-pointer" icon="ei:arrow-right"/>
-</button>
+	<div class="bg-[#000] w-full md:w-1/2 h-full flex flex-col justify-center items-center">
+		<button on:click={next}>
+			<Icon class="w-16 h-16 cursor-pointer" icon="ei:arrow-right"/>
+		</button>
+        {#each paginatedSource as row}
+        <div class="card w-full md:w-[550px] border-2 mb-6">
+            <header style="background-image: url({row.cover})" class="card-header background rounded-3xl rounded-b-none h-[145px] w-full"></header>
+            <section class="flex flex-col items-center gap-5 justify-center p-4">
+                {#if row.sound === '../../The-Lone-Watcher/rain-in-the-afternoon.mp3'}
+                <audio autoplay loop>
+                    <source src="../../The-Lone-Watcher/rain-in-the-afternoon.mp3" type="audio/mp3" />
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+                {/if}
+                {#if row.sound === '../../The-Lone-Watcher/cars-moving-and-horns-honking.mp3'}
+                <audio autoplay loop>
+                    <source src="../../The-Lone-Watcher/cars-moving-and-horns-honking.mp3" type="audio/mp3" />
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+                {/if}
+                {#if row.sound === '../../The-Lone-Watcher/nightclub.mp3'}
+                <audio autoplay loop>
+                    <source src="../../The-Lone-Watcher/nightclub.mp3" type="audio/mp3" />
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+                {/if}
+                {#if row.sound === '../../The-Lone-Watcher/prayer.mp3'}
+                <audio autoplay loop>
+                    <source src="../../The-Lone-Watcher/prayer.mp3" type="audio/mp3" />
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+                {/if}
+                {#if row.sound === '../../The-Lone-Watcher/portal.mp3'}
+                <audio autoplay loop>
+                    <source src="../../The-Lone-Watcher/portal.mp3" type="audio/mp3" />
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+                {/if}
+                <h3 class="h3">{row.title}</h3>
+                <h4 class="text-[#000] h4 font-bold">{row.part_title}</h4>
+                <hr class="w-full" />
+                <p class="mb-4 mt-0 text-justify font-light leading-relaxed text-[12px]">
+                    {row.text}
+                </p>
+            </section>
+            <footer class="card-footer">
+                <Paginator bind:settings={paginationSettings} showFirstLastButtons={true} showPreviousNextButtons={true} justify="justify-center" select="hidden" />
+            </footer>
+        </div>
+        {/each}
+    </div>
 </div>
 <style>
 	.background {

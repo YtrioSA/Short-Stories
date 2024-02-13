@@ -4,8 +4,12 @@
 	import { Paginator } from "@skeletonlabs/skeleton";
 	import { goto } from '$app/navigation';
 
-	const left = () => {
+	const previus = () => {
 		goto("/gender/tragedy/a-magia-amaldiçoada");
+	}
+
+	const next = () => {
+		goto("/gender/tragedy/a-melodia-perdida");
 	}
 
 	const source = [
@@ -98,8 +102,11 @@
 <div class="bg-[#000] w-full h-full flex justify-center items-center">
 	<div class="bg-[#000] w-full md:w-1/2 p-4 h-full flex flex-col justify-center items-center">
 		<div class="flex">
-			<button on:click={left}>
+			<button on:click={previus}>
 				<Icon class="w-16 h-16 cursor-pointer" icon="ei:arrow-left"/>
+			</button>
+			<button on:click={next}>
+				<Icon class="w-16 h-16 cursor-pointer" icon="ei:arrow-right"/>
 			</button>
 		</div>
 	{#each paginatedSource as row}
